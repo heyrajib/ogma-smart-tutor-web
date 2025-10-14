@@ -1,0 +1,10 @@
+[
+  {
+    "Condition": {
+      "KeyPrefixEquals": "buy-credits/"
+    },
+    "Redirect": {
+      "ReplaceKeyWith": "buy-credits/index.html"
+    }
+  }
+]

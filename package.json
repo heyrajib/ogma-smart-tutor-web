@@ -5,8 +5,11 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
+    "export": "next build && next export",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy:s3": "aws s3 sync out/ s3://${S3_BUCKET_NAME} --delete",
+    "deploy:cloudfront": "aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'"
   },
   "dependencies": {
     "react": "19.1.0",
